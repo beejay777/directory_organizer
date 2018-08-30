@@ -21,7 +21,7 @@ while IFS='' read -r line || [[ -n "$line" ]]; do
            [ -d "pdfs" ] || mkdir "pdfs"
            mv "$line" "./pdfs/"
        fi
-       if [ "${line: -4}" = ".zip" ] || [ "${line: -4}" = ".tar" ] || [ "${line: -5}" = ".rar" ]; then
+       if [ "${line: -4}" = ".zip" ] || [ "${line: -4}" = ".tar" ] || [ "${line: -4}" = ".rar" ] || [ "${line: -7}" = ".tar.xz" ] || [ "${line: -7}" = ".tar.gz" ]; then
            [ -d "compressed" ] || mkdir "compressed"
            mv "$line" "./compressed/"
        fi
